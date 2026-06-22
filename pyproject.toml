@@ -1,0 +1,16 @@
+[project]
+name = "stocks"
+version = "0.1.0"
+description = "This is a Machine Learning project focused on individual stocks"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "jinja2>=3.1.6",
+    "nbformat>=5.10.4",
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "plotly>=6.8.0",
+    "scikit-learn>=1.9.0",
+    "yfinance>=1.4.1",
+]
