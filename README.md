@@ -239,3 +239,9 @@ Do not require changes at all. Scoring, comparison, prediction, backtesting, and
 
 **MLConfig**  
 Would need updated default dates or none at all if the data comes from a database rather than a date range pull.
+
+___
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/JusOConnor) \
+[If you like my work or if you found this at all helpful please feel free to contribute.](buymeacoffee.com/JusOConnor) \
+buymeacoffee.com/JusOConnor
