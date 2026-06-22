@@ -29,9 +29,9 @@ images/
 # Outputs
 models/*.txt
 models/*.pkl
-models/backup/*
-reports/backtesting/*
-reports/walkforward/*
+models/backup/*/
+reports/backtesting/*.csv
+reports/walkforward/*.csv
 reports/*.csv
-data/*
+data/*.csv
 backup/*
