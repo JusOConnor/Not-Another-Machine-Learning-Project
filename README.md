@@ -1,5 +1,5 @@
 # Not Another Machine Learning Project
-I wanted to take a different approach to this project.  Yes, this IS another ML project, but I want to show how it's working, how the models evolove over time, and do it in a manner that doesn't require a Masters Degree to understand.  The idea isn't just to give users another project to run blindly, but to demystify the concepts.
+I wanted to take a different approach to this project.  Yes, this IS another ML project, but I want to show how it's working, how the models evolve over time, and do it in a manner that doesn't require a Master's Degree to understand.  The idea isn't just to give users another project to run blindly, but to demystify the concepts.
 
 ***This is going to be focused on creating ML models based on stock performance.  In no way should this be your basis for financial decisions***
 
@@ -44,7 +44,7 @@ Here's where we start to answer the "now what?" portion of the ML project.  The 
 
 ___
 **Step 5:**  
-This step is effectively steps 1 through 4, but adjusts the "end date" to reflect the current date.  There is also a safeguard in place that compares the models against the previous run.  If there is no improved the model is not updated.  The improvement level can be adjusted by updating the 'min_improvement' variable in the Ticker_Config.py file.  It is recommended to run the first 4 steps manualy to get an understand of what each step is doing and then run step 5 on a regular cadence for your go forward.  Optionally, you can skip the manual run of each step and just work with Step 5 for both the initial loads and the go-forward.
+This step is effectively steps 1 through 4 but adjusts the "end date" to reflect the current date.  There is also a safeguard in place that compares the models against the previous run.  If there is no improved the model is not updated.  The improvement level can be adjusted by updating the 'min_improvement' variable in the Ticker_Config.py file.  It is recommended to run the first 4 steps manually to get an understand of what each step is doing and then run step 5 on a regular cadence for your go forward.  Optionally, you can skip the manual run of each step and just work with Step 5 for both the initial loads and the go-forward.
 Suggested schedule:  
 - Monthly - safe default
 - Weekly - reasonable for more active tracking
@@ -105,7 +105,7 @@ Step_2_Train.py         # trains 3 models, saves .pkl files
 Step_3_Compare.py       # scores all models, writes results log
 Step_4_Predict.py       # loads best model, predicts today
 Step_5_Retrain.py       # runs steps 1 through 4 with a default 'end_date' of today()
-Step_6_Backtsting.py    # builds a dataset comapring the model predictions versus actuals
+Step_6_Backtsting.py    # builds a dataset comparing the model predictions versus actuals
 Step_7_Walkforward.py   # automatically simulates the models evolution over time
 ```
 
@@ -139,10 +139,10 @@ cfg = tc.MLConfig(cfg_list, start_date, end_date)
 Step5.fMain(cfg)
 ```
 
-The two previosuly mentioned Jupyter notebooks have these steps prebuilt.  
+The two previously mentioned Jupyter notebooks have these steps prebuilt.  
 
 #### Backtesting and Walkforward - Optional Analytics  
-Both of these have two functions you will use.  The fMain() performs the analysis on individual Tickers.  The combine_backtest_files() and combine_walkforward_files() functions combine the results from each.  The combine functions are optional and make importing the data into programs like PowerBI and Excel easier since it combines the results into single files for import rather than having to link each Ticker's output individually.
+Both have two functions you will use.  The fMain() performs the analysis on individual Tickers.  The combine_backtest_files() and combine_walkforward_files() functions combine the results from each.  The combine functions are optional and make importing the data into programs like PowerBI and Excel easier since it combines the results into single files for import rather than having to link each Ticker's output individually.
 ___
 
 
@@ -187,7 +187,7 @@ ___
 **Overall Model Accuracy**  
 <img src="Screenshots/BT Overall Accuracy by Model.png" width="30%">  
 
-**Montly Accuracy by Model**  
+**Monthly Accuracy by Model**  
 <img src="Screenshots/BT Monthly Model Accuracy.png" width="30%"> 
 
 **Predictions vs Actuals Over Time**  
@@ -229,7 +229,7 @@ ___
 ___
 ## Repurposing for different data  
 **Step 1**  
-This where most of the work happens. The entire engineer_features function is domain-specific. Moving averages, momentum, and volume ratios are stock concepts. For something like customer sales data you would replace those with sales domain features like rolling average order value, days since last purchase, purchase frequency, or month-over-month growth rate. The target variable also changes, instead of "will price go up tomorrow" it might be "will this customer churn" or "will they buy again this month."  
+This where most of the work happens. The entire engineer_features function is domain specific. Moving averages, momentum, and volume ratios are stock concepts. For something like customer sales data, you would replace those with sales domain features like rolling average order value, days since last purchase, purchase frequency, or month-over-month growth rate. The target variable also changes, instead of "will price go up tomorrow" it might be "will this customer churn" or "will they buy again this month."  
 
 **Step 2**  
 FEATURE_COLUMNS then just needs to reflect whatever columns step 1 produces. It is a manifest of what step 1 creates, so they always move together.  
@@ -238,10 +238,10 @@ FEATURE_COLUMNS then just needs to reflect whatever columns step 1 produces. It 
 Do not require changes at all. Scoring, comparison, prediction, backtesting, and retraining are all domain-agnostic. They just see numbers going in and predictions coming out.  
 
 **MLConfig**  
-Would need updated default dates or none at all if the data comes from a database rather than a date range pull.
+Would need updated default dates or none if the data comes from a database rather than a date range pull.
 
 ___
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/JusOConnor) \
-[If you like my work or if you found this at all helpful please feel free to contribute.](buymeacoffee.com/JusOConnor) \
+[If you like my work or if you found this at all helpful, please feel free to contribute.](buymeacoffee.com/JusOConnor) \
 buymeacoffee.com/JusOConnor
