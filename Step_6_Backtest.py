@@ -3,6 +3,7 @@ Step 6: Backtest - Predictions vs Actuals
 ==========================================
 This script produces a side-by-side comparison of what each model
 predicted vs what actually happened, for every day in the test set.
+It also outputs the data into CSV files for further analysis in Excel or Power BI.
 
 This is possible because the test set is historical data:
   - We know the actual outcome for every row (target column)

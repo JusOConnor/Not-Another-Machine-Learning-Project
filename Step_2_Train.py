@@ -12,7 +12,7 @@ from sklearn.pipeline import Pipeline
 # These are the only columns the model should ever see.
 # Selecting them explicitly means load_and_split is safe even if
 # features.csv contains extra columns (e.g. OHLCV from an older run).
-
+# This should match the columns produced by step1.py. If you add new features, update both places.
 FEATURE_COLUMNS = [
     "close_to_ma5",
     "close_to_ma20",

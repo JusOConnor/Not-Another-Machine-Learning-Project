@@ -14,6 +14,9 @@ Instead of one fixed train/test split, this script:
 This answers: "Is adding more data actually improving my models,
 or are they just memorizing noise?"
 
+TLDR: Instead of building the model over time to see how it performed this 
+essenitally simulates what would have happened if you had retrained the model at each step.
+
 Outputs:
   reports/walkforward/walkforward_{TICKER}.csv     one row per model per window
   reports/walkforward/walkforward_summary_{TICKER}.csv  best model per window

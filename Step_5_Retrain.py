@@ -98,6 +98,8 @@ def should_replace(new_best_auc, previous_best_auc, min_improvement):
 # ------------------------------------------------------------
 # Main entry point
 # ------------------------------------------------------------
+# This function can be used for the inital data load as well
+# For on-going usage, this function can be called from a scheduler (e.g. cron, Airflow, etc.) to retrain models on a regular basis.  Please see the README for more details.
 
 # def fMain(TICKER, START_DATE, FEATURES_PATH, OUTPUT_PATH, MODELS_DIR, BACKUP_DIR,
 #           TEST_SET_PATH, RESULTS_LOG, BEST_MODEL_PTR, TRAIN_FRACTION, MIN_IMPROVEMENT):

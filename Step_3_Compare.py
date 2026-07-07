@@ -15,7 +15,7 @@ from Step_2_Train import FEATURE_COLUMNS
 
 def load_all_models(models_dir, TICKER):
     """
-    Scans models/ for ticker-specific .pkl files and loads each one.
+    Scans models folder for ticker-specific .pkl files and loads each one.
     Returns a dict of {model_name: trained_pipeline}.
     """
     model_files = glob.glob(os.path.join(models_dir, f"*_{TICKER}.pkl"))

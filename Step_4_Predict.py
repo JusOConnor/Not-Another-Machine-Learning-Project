@@ -19,7 +19,7 @@ def load_best_model(models_dir, ptr_path, TICKER):
     then loads and returns that model pipeline.
 
     The pointer file stores just the base name (e.g. "random_forest").
-    The actual file on disk is "random_forest_MSFT.pkl".
+    The actual file on disk is "random_forest_MSFT.pkl" where 'MFST' reflects the TICKER.
     Keeping them separate means the pointer file stays ticker-agnostic
     and we only need TICKER in one place when loading.
     """

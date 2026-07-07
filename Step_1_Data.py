@@ -5,8 +5,6 @@ This script does two things:
   1. Pulls historical stock price data from Yahoo Finance
   2. Engineers features (the columns the model will learn from)
 
-Call fMain() from other scripts or run directly for a quick test.
-
 Outputs:
   data/features.csv   engineered columns only, used for training
   data/prices.csv     raw OHLCV columns, saved for reference only
