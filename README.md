@@ -84,7 +84,7 @@ stocks/
 ```
 
 Run this block of code to remove all the generated files and "start over" with the project.
-```
+```python
 import Empty_Folders
 Empty_Folders.fClearProjectFolders()
 ```
@@ -111,7 +111,7 @@ Step_7_Walkforward.py   # automatically simulates the models evolution over time
 
 #### Loading Data  
 For the first run I would suggest running Steps 1 through 4 to get a sense of how everything works.
-```
+```python
 # Import Functions
 import Ticker_Config as tc
 import Step_1_Data as Step1
@@ -128,7 +128,7 @@ Step1.fMain(cfg)    # replace 'Step1' with whichever step you need
 ```
 The 'cfg' variable returned from MLConfig contains all the variables needed for each function so you won't need to worry about identifying them manually.  
 Alternatively, you can just run Step_5_Retrain.py and load it all in one go.
-```
+```python
 import Step_5_Retrain as Step5
 
 cfg_list = 'SPY'
