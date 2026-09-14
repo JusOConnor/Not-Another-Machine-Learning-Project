@@ -59,7 +59,7 @@ It's worth noting models can degrade with frequent runs.  Think of it like a wea
 
 ___
 **Step 6:**  
-Up until this point the outputs have been model files and log entries, useful for the pipeline but not easy to interpret. This step produces a side-by-side comparison of what each model predicted versus what actually happened and produces a CSV file/s that we can import into something like Excel or PowerBI to visualize.  Alternately you could build the visuals in Jupyter.
+Up until this point the outputs have been model files and log entries, useful for the pipeline but not easy to interpret. This step produces a side-by-side comparison of what each model predicted versus what actually happened and produces a CSV file/s that we can import into something like Excel or Power BI to visualize.  Alternately you could build the visuals in Jupyter.
 
 ___
 **Step 7:**  
@@ -75,7 +75,7 @@ The outputs from this step are designed to feed directly into Power BI or Excel.
 
 ___
 ## Folder Structure
-Thess folders will be created automatically as you move through each step
+These folders will be created automatically as you move through each step
 ```
 stocks/
 ├── data/
@@ -98,9 +98,7 @@ Empty_Folders.fClearProjectFolders()
 ___
 
 ## Start Here  
-I've included two Jupyter notebooks for the data loading.  
-Data Management Single - Use this if you're working with a single stock ticker  
-Data Management Multi - Use this to work from a list
+Data Management.ipynb
 
 ### Python Files
 ```python
@@ -119,13 +117,14 @@ Step_7_Walkforward.py   # automatically simulates the models evolution over time
 For the first run I would suggest running Steps 1 through 4 to get a sense of how everything works.
 ```python
 # Import Functions
-import Ticker_Config as tc
-import Step_1_Data as Step1
-import Step_2_Train as Step2
-import Step_3_Compare as Step3
-import Step_4_Predict as Step4
+import Functions.Ticker_Config as tc
+import Functions.Step_1_Data as Step1
+import Functions.Step_2_Train as Step2
+import Functions.Step_3_Compare as Step3
+import Functions.Step_4_Predict as Step4
 
-ticker = 'SPY'
+cfg_list = ('SPY')
+cfg_list = tc.tuple_check(cfg_list)
 start_date = '2018-01-01'
 end_date = '2025-12-31'
 
@@ -145,7 +144,7 @@ cfg = tc.MLConfig(cfg_list, start_date, end_date)
 Step5.fMain(cfg)
 ```
 
-The two previously mentioned Jupyter notebooks have these steps prebuilt.  
+The previously mentioned Jupyter notebooks have these steps prebuilt.  
 
 #### Backtesting and Walkforward - Optional Analytics  
 Both have two functions you will use.  The fMain() performs the analysis on individual Tickers.  The combine_backtest_files() and combine_walkforward_files() functions combine the results from each.  The combine functions are optional and make importing the data into programs like PowerBI and Excel easier since it combines the results into single files for import rather than having to link each Ticker's output individually.
