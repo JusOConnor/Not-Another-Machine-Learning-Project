@@ -4,8 +4,8 @@ import pickle
 import os
 import yfinance as yf
 
-from Step_1_Data import engineer_features, pull_raw_data
-from Step_2_Train import FEATURE_COLUMNS
+from Functions.Step_1_Data import engineer_features, pull_raw_data
+from Functions.Step_2_Train import FEATURE_COLUMNS
 
 
 # ------------------------------------------------------------

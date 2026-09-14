@@ -25,8 +25,8 @@ import pickle
 import os
 import glob
 
-from Step_2_Train import FEATURE_COLUMNS
-from Step_3_Compare import load_all_models, load_test_set
+from Functions.Step_2_Train import FEATURE_COLUMNS
+from Functions.Step_3_Compare import load_all_models, load_test_set
 
 
 # ------------------------------------------------------------

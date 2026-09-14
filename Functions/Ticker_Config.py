@@ -22,3 +22,8 @@ class MLConfig:
         self.best_model_ptr = f'models/best_model_{ticker}.txt'
         self.lookback_days  = 80
         self.min_improvement = 0.0
+
+def tuple_check(cfg_list):
+    if isinstance(cfg_list, str):
+        cfg_list = (cfg_list,)
+    return cfg_list

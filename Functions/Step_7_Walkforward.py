@@ -36,7 +36,7 @@ from sklearn.metrics import (
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
-from Step_2_Train import FEATURE_COLUMNS, build_models
+from Functions.Step_2_Train import FEATURE_COLUMNS, build_models
 
 
 # ------------------------------------------------------------

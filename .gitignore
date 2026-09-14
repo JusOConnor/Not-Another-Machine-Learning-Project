@@ -35,3 +35,10 @@ reports/walkforward/*.csv
 reports/*.csv
 data/*.csv
 backup/*
+
+# Temp for Dev
+smodels/
+smodels/
+sdata/
+sreports/
+
