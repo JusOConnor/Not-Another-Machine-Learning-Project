@@ -37,8 +37,7 @@ data/*.csv
 backup/*
 
 # Temp for Dev
-smodels/
-smodels/
-sdata/
-sreports/
+models/
+data/
+reports/
 
